@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --title-font: 'Playfair Display';
+  --title-weight: 400;
+
+  --content-font: 'Roboto';
+  --content-font-color: #76777fff;
+  --content-line-height: 1.5;
+
+  --spacing-small: 1rem;
+  --spacing-med: 2rem;
+  --spacing-large: 3rem;
+}
 
 * {
   padding: 0;
@@ -15,32 +29,60 @@
   flex-direction: column;
 }
 
+/* Utils */
+
 .portrait-wrapper {
   background: #2980b9; /* fallback for old browsers */
 
   /* background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  padding: 2rem;
-  transform: translateY(-40%) skewY(-25deg);
+  padding: var(--spacing-med);
+  transform: translateY(-30%) skewY(-25deg);
 }
 
 .portrait {
-  min-height: 300px;
+  min-height: 500px;
   background-image: url(https://images.pexels.com/photos/4327837/pexels-photo-4327837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   background-size: cover;
   background-position: center;
-  transform: translateY(50%) skewY(25deg);
+  transform: translateY(35%) skewY(25deg);
   align-items: flex-end;
 }
 
 .portrait-title {
   color: #fff;
-  font-family: 'Playfair Display';
-  font-weight: 400;
-  font-size: 2rem;
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
+  font-size: 4rem;
   line-height: 1.5;
   max-width: 100px; /* break first and last name into new line */
+}
+
+.about-me-wrapper {
+  padding: 0 var(--spacing-small);
+}
+
+.about-me-wrapper .about-me-title {
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
+  font-size: var(--spacing-med);
+}
+
+.about-me-content {
+  color: var(--content-font-color);
+  font-family: var(--content-font);
+  line-height: var(--content-line-height);
+}
+
+.about-me-socials {
+  gap: var(--spacing-small);
+  justify-content: center;
+
+  & i {
+    font-size: var(--spacing-med);
+  }
 }
 
 li {
