@@ -1,9 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .portrait-wrapper {
   background: #2980B9;  /* fallback for old browsers */
-  background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
-  padding: 2rem 2rem 0 2rem;
-  transform: skewY(-11deg);
+  padding: 2rem;
+  transform: translateY(-40%) skewY(-25deg);
 }
 
 
@@ -12,7 +19,7 @@
   background-image: url(https://images.pexels.com/photos/4327837/pexels-photo-4327837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   background-size: cover;
   background-position: center;
-  transform: skewY(11deg);
+  transform: translateY(50%) skewY(25deg);
 
 }
 
