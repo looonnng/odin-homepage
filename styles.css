@@ -10,13 +10,24 @@
   --content-line-height: 1.5;
 
   --spacing-small: 1rem;
-  --spacing-med: 2rem;
-  --spacing-large: 3rem;
+  --spacing-med: 2.5rem;
+  --spacing-large: 4rem;
+  --shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 * {
   padding: 0;
   margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 /* Utils */
@@ -31,6 +42,7 @@
 
 /* Utils */
 
+/* About me */
 .portrait-wrapper {
   background: #2980b9; /* fallback for old browsers */
 
@@ -74,21 +86,95 @@
   color: var(--content-font-color);
   font-family: var(--content-font);
   line-height: var(--content-line-height);
+  padding: var(--spacing-small) 0;
 }
 
 .about-me-socials {
   gap: var(--spacing-small);
   justify-content: center;
 
+  /* icon sizes */
   & i {
     font-size: var(--spacing-med);
   }
 }
 
-li {
-  list-style: none;
+/* My work */
+.my-work-wrapper {
+  padding: 10rem var(--spacing-small);
 }
 
-a:link {
-  text-decoration: none;
+.cards-wrapper {
+  margin: 2rem 0;
+}
+
+.card {
+  box-shadow: var(--shadow);
+}
+
+/* Sibling selector */
+.card + .card {
+  margin-top: var(--spacing-large);
+}
+/* alternative way
+
+ .card:not(:last-of-type) {
+  margin-bottom: var(--spacing-large);
+  
+} */
+
+.card__image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sunset-surfer {
+  object-position: bottom;
+}
+
+.my-work-title {
+  font-size: var(--spacing-med);
+  text-align: center;
+}
+
+.my-work-title,
+.card__title {
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
+}
+
+.card__details {
+  padding: 1rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  flex: 1;
+}
+
+.card__socials {
+  gap: 1rem;
+
+  & i {
+    font-size: 24px;
+  }
+}
+
+.card__socials-item {
+  align-items: center;
+
+  /* center icon */
+  & a {
+    display: inline-flex;
+  }
+}
+
+.card__description {
+  min-height: 150px;
+  color: var(--content-font-color);
+  font-size: var(--content-font);
+  padding: 0 var(--spacing-small);
+  line-height: var(--content-line-height);
 }
