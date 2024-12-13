@@ -30,6 +30,10 @@ a:link {
   text-decoration: none;
 }
 
+a:visited {
+  color: none;
+}
+
 /* Utils */
 .flex {
   display: flex;
@@ -89,13 +93,18 @@ a:link {
   padding: var(--spacing-small) 0;
 }
 
-.about-me-socials {
+.about-me-socials,
+.contact-me-socials {
   gap: var(--spacing-small);
   justify-content: center;
 
   /* icon sizes */
   & i {
     font-size: var(--spacing-med);
+  }
+
+  & .devicon-linkedin-plain.colored {
+    color: #000
   }
 }
 
@@ -178,3 +187,49 @@ a:link {
   padding: 0 var(--spacing-small);
   line-height: var(--content-line-height);
 }
+
+.contact-me-wrapper {
+  color: #fff;
+  background-color: #2980b9;
+  padding: 1rem var(--spacing-small) 3rem var(--spacing-small);
+  font-family: var(--content-font);
+  font-weight: 300;
+
+
+
+  & .contact-me__title {
+    text-align: center;
+  }
+}
+
+.contact-me__title {
+  font-family: var(--title-font);
+  font-weight: var(--title-weight);
+  font-size: var(--spacing-med);
+}
+
+.contact-me__description {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.contact-me__address,
+.contact-me__details {
+  margin-top: 2rem;
+}
+
+.contact-me__details > li + li {
+  margin-top: 0.5rem;
+}
+
+.contact-me-socials {
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.footer-portrait-wrapper img {
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
