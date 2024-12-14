@@ -248,7 +248,7 @@ footer {
 /* Tablet layout */
 @media (min-width: 760px) {
   header {
-    height: 60vh;
+    height: 70vh;
   }
 
   .diagonal-wrapper {
@@ -259,10 +259,15 @@ footer {
   }
 
   .about-me-wrapper {
-    transform: translateY(60%) skewY(15deg);
+    transform: translateY(70%) skewY(15deg);
     background-color: #fff;
     padding: var(--spacing-med);
     box-shadow: var(--shadow);
+  }
+
+  .about-me-wrapper .about-me-title {
+    margin: 0;
+    text-align: left;
   }
 
   .portrait-wrapper {
@@ -332,20 +337,56 @@ footer {
 
 @media (min-width: 1000px) {
   .diagonal-wrapper {
-    transform: translateY(-25%) skewY(-15deg);
+    transform: translateY(-30%) skewY(-15deg);
   }
 
   .about-me-wrapper {
-    transform: translateY(80%) skewY(15deg);
-    padding: var(--spacing-small) var(--spacing-large);
+    width: 90%;
+    margin: 0 auto;
+
+    transform: translateY(70%) skewY(15deg);
+
+    & > .about-me-title {
+      text-align: left;
+    }
   }
 
   .portrait-wrapper {
-    transform: translate(-4rem, -3rem);
+    transform: translate(-4rem, -7rem);
+    width: 450px;
   }
 
   .portrait {
     margin-bottom: 0;
     min-height: 550px;
+    justify-content: center;
+  }
+
+  .portrait-title {
+    max-width: 100%;
+  }
+
+  .about-me-socials {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-me-wrapper {
+    transform: translateY(100%) skewY(15deg);
+  }
+
+  .portrait-wrapper {
+    transform: translate(-4rem, -9rem);
+    width: 50%;
+  }
+
+  .portrait {
+    height: 600px;
+  }
+
+  .footer-portrait-wrapper {
+    width: 100%;
+    justify-content: center;
   }
 }
