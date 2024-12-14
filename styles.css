@@ -47,22 +47,24 @@ a:visited {
 /* Utils */
 
 /* About me */
-.portrait-wrapper {
+.diagonal-wrapper {
   background: #2980b9; /* fallback for old browsers */
 
   /* background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  padding: var(--spacing-med);
-  transform: translateY(-30%) skewY(-25deg);
+  transform: translateY(-60%) skewY(-25deg);
+}
+
+.portrait-wrapper {
+  padding: 0 1.5rem;
 }
 
 .portrait {
-  min-height: 500px;
-  background-image: url(https://images.pexels.com/photos/4327837/pexels-photo-4327837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  min-height: 400px;
+  background-image: url(assets/Surfer-Riding-Wave-800w.jpeg);
   background-size: cover;
   background-position: center;
-  transform: translateY(35%) skewY(25deg);
   align-items: flex-end;
 }
 
@@ -76,7 +78,8 @@ a:visited {
 }
 
 .about-me-wrapper {
-  padding: 0 var(--spacing-small);
+  transform: translateY(60%) skewY(25deg);
+  padding: var(--spacing-med) 1rem;
 }
 
 .about-me-wrapper .about-me-title {
@@ -84,6 +87,7 @@ a:visited {
   font-family: var(--title-font);
   font-weight: var(--title-weight);
   font-size: var(--spacing-med);
+  margin-top: 2rem;
 }
 
 .about-me-content {
@@ -104,7 +108,7 @@ a:visited {
   }
 
   & .devicon-linkedin-plain.colored {
-    color: #000
+    color: #000;
   }
 }
 
@@ -195,8 +199,6 @@ a:visited {
   font-family: var(--content-font);
   font-weight: 300;
 
-
-
   & .contact-me__title {
     text-align: center;
   }
@@ -233,3 +235,40 @@ a:visited {
   object-fit: cover;
 }
 
+/* Tablet layout */
+@media (700px < width < 900px) {
+  header {
+    height: 60vh;
+  }
+
+  .diagonal-wrapper {
+    height: 100%;
+    transform: translateY(-45%) skewY(-15deg);
+    padding: 4rem;
+    box-shadow: var(--shadow);
+  }
+
+  .about-me-wrapper {
+    transform: translateY(70%) skewY(15deg);
+    background-color: #fff;
+    padding: var(--spacing-med);
+    box-shadow: var(--shadow);
+  }
+
+  .portrait-wrapper {
+    padding: 0;
+    float: left;
+    width: 400px;
+    transform: translate(-4.5rem, -8rem);
+    margin-right: -3rem;
+  }
+
+  .portrait {
+    margin-bottom: -8rem;
+    box-shadow: var(--shadow);
+  }
+
+  .my-work-wrapper {
+    padding: 13rem var(--spacing-small);
+  }
+}
