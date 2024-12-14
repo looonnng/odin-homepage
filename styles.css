@@ -129,6 +129,7 @@ a:visited {
 .card + .card {
   margin-top: var(--spacing-large);
 }
+ 
 /* alternative way
 
  .card:not(:last-of-type) {
@@ -269,6 +270,20 @@ a:visited {
   }
 
   .my-work-wrapper {
-    padding: 13rem var(--spacing-small);
+    padding: 13rem 4rem;
+
+    & .my-work-title {
+      text-align: left;
+    }
+  }
+
+  .cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-med);
+  }
+
+  .card + .card {
+    margin-top: 0;
   }
 }
