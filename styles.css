@@ -8,6 +8,7 @@
   --content-font: 'Roboto';
   --content-font-color: #76777fff;
   --content-line-height: 1.5;
+  --content-font-size: 1.3rem;
 
   --spacing-small: 1rem;
   --spacing-med: 2.5rem;
@@ -129,7 +130,7 @@ a:visited {
 .card + .card {
   margin-top: var(--spacing-large);
 }
- 
+
 /* alternative way
 
  .card:not(:last-of-type) {
@@ -193,16 +194,19 @@ a:visited {
   line-height: var(--content-line-height);
 }
 
-.contact-me-wrapper {
-  color: #fff;
+footer {
   background-color: #2980b9;
-  padding: 1rem var(--spacing-small) 3rem var(--spacing-small);
+  color: #fff;
+}
+
+.contact-me-wrapper {
+  padding: 3rem var(--spacing-small);
   font-family: var(--content-font);
   font-weight: 300;
+}
 
-  & .contact-me__title {
-    text-align: center;
-  }
+.contact-me__title {
+  text-align: center;
 }
 
 .contact-me__title {
@@ -212,7 +216,7 @@ a:visited {
 }
 
 .contact-me__description {
-  font-size: 1.3rem;
+  font-size: var(--content-font-size);
   margin: 1rem 0;
 }
 
@@ -223,6 +227,11 @@ a:visited {
 
 .contact-me__details > li + li {
   margin-top: 0.5rem;
+}
+
+.contact-me__icon-wrapper {
+  display: flex;
+  gap: 1rem;
 }
 
 .contact-me-socials {
@@ -283,7 +292,36 @@ a:visited {
     gap: var(--spacing-med);
   }
 
+  /* remove mobile layout margin */
   .card + .card {
     margin-top: 0;
+  }
+
+  footer {
+    display: flex;
+  }
+
+  .contact-me-wrapper {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 0;
+    font-size: var(--content-font-size);
+  }
+
+  .contact-me__title {
+    text-align: left;
+  }
+
+  .footer-portrait-wrapper {
+    padding: 2rem;
+
+    > img {
+      height: 100%;
+    }
+  }
+
+  .contact-me-socials {
+    justify-content: flex-start;
+    padding: 2rem 0;
   }
 }
