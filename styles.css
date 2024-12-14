@@ -246,20 +246,20 @@ footer {
 }
 
 /* Tablet layout */
-@media (700px < width < 900px) {
+@media (min-width: 760px) {
   header {
     height: 60vh;
   }
 
   .diagonal-wrapper {
     height: 100%;
-    transform: translateY(-45%) skewY(-15deg);
+    transform: translateY(-30%) skewY(-15deg);
     padding: 4rem;
     box-shadow: var(--shadow);
   }
 
   .about-me-wrapper {
-    transform: translateY(70%) skewY(15deg);
+    transform: translateY(60%) skewY(15deg);
     background-color: #fff;
     padding: var(--spacing-med);
     box-shadow: var(--shadow);
@@ -276,6 +276,10 @@ footer {
   .portrait {
     margin-bottom: -8rem;
     box-shadow: var(--shadow);
+  }
+
+  .about-me-content {
+    font-size: var(--content-font-size);
   }
 
   .my-work-wrapper {
@@ -323,5 +327,25 @@ footer {
   .contact-me-socials {
     justify-content: flex-start;
     padding: 2rem 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .diagonal-wrapper {
+    transform: translateY(-25%) skewY(-15deg);
+  }
+
+  .about-me-wrapper {
+    transform: translateY(80%) skewY(15deg);
+    padding: var(--spacing-small) var(--spacing-large);
+  }
+
+  .portrait-wrapper {
+    transform: translate(-4rem, -3rem);
+  }
+
+  .portrait {
+    margin-bottom: 0;
+    min-height: 550px;
   }
 }
